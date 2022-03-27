@@ -1,11 +1,15 @@
 package me.heinoushare.plughatia118;
 
+import me.heinoushare.plughatia118.commands.giveSteelIngot;
+//import me.heinoushare.plughatia118.commands.giveSteelNugget;
 import me.heinoushare.plughatia118.commands.setRace;
 import me.heinoushare.plughatia118.commands.speed;
+import me.heinoushare.plughatia118.events.craftSteelIngot;
 import me.heinoushare.plughatia118.events.playerChangeMode;
 import me.heinoushare.plughatia118.events.playerJoin;
 import me.heinoushare.plughatia118.events.playerSneak;
 //import me.heinoushare.plughatia118.events.playerWalk;
+import me.heinoushare.plughatia118.items.itemManager;
 import me.heinoushare.plughatia118.utils.playerStorageUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
@@ -27,16 +31,21 @@ public final class PlugHatia118 extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new playerJoin(), this);
         getServer().getPluginManager().registerEvents(new playerChangeMode(), this);
         getServer().getPluginManager().registerEvents(new playerSneak(), this);
+        getServer().getPluginManager().registerEvents(new craftSteelIngot(), this);
 //        getServer().getPluginManager().registerEvents(new playerWalk(), this);
 
         getCommand("setRace").setExecutor(new setRace());
         getCommand("speed").setExecutor(new speed());
+        getCommand("giveSteelIngot").setExecutor(new giveSteelIngot());
+//        getCommand("giveSteelNugget").setExecutor(new giveSteelNugget());
 
         try {
             playerStorageUtil.loadPlayers();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        itemManager.init();
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "PlugHatia118 has started!");
 

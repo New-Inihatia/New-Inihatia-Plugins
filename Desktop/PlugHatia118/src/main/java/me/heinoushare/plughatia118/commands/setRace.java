@@ -36,7 +36,7 @@ public class setRace implements CommandExecutor {
                 playerObj newJSONplayer = JSONplayer;
                 newJSONplayer.setUsername(player.getName());
                 newJSONplayer.setUuid(uuid);
-                if (JSONplayer.getRace().equalsIgnoreCase("Human")) {
+                if (JSONplayer.getRace().equalsIgnoreCase("Traveler")) {
                     if (args[0].equalsIgnoreCase("Hobbit")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);

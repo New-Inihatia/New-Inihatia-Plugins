@@ -5,9 +5,12 @@ api-version: 1.18
 authors: [ Heinoushare ]
 description: New Inihatia 1.18 plugin
 commands:
-  setRace:
+  setrace:
     description: set race
     usage: setRace <race>
   speed:
     description: kachow!
     usage: speed
+  givesteelingot:
+    description: Steel Ingot
+    usage: giveSteelIngot

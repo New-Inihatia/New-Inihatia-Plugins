@@ -27,7 +27,7 @@ public class playerJoin implements Listener {
         playerObj JSONplayer = playerStorageUtil.findPlayer(uuid);
 
         if (JSONplayer == null) {
-            playerStorageUtil.createPlayer(player, "Human", "Traveler");
+            playerStorageUtil.createPlayer(player, "Traveler", "Traveler");
         }
         else if (JSONplayer != null) {
             if (JSONplayer.getRace().equalsIgnoreCase("Human")) {
