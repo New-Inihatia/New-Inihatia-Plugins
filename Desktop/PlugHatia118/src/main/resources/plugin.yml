@@ -1,0 +1,13 @@
+name: PlugHatia118
+version: '${project.version}'
+main: me.heinoushare.plughatia118.PlugHatia118
+api-version: 1.18
+authors: [ Heinoushare ]
+description: New Inihatia 1.18 plugin
+commands:
+  setRace:
+    description: set race
+    usage: setRace <race>
+  speed:
+    description: kachow!
+    usage: speed
