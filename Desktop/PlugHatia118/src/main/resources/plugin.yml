@@ -11,6 +11,9 @@ commands:
   speed:
     description: kachow!
     usage: speed
+  leap:
+    description: bunnyboi
+    usage: leap
   givesteelingot:
     description: Steel Ingot
     usage: giveSteelIngot

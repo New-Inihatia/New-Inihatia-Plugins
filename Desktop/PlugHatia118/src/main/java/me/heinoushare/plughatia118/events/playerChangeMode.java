@@ -15,7 +15,7 @@ public class playerChangeMode implements Listener {
 
         Player player = event.getPlayer();
         GameMode gameMode = event.getNewGameMode();
-        Bukkit.broadcastMessage(ChatColor.YELLOW + player.toString() + " has gone into " + gameMode + " mode.");
+        Bukkit.broadcastMessage(ChatColor.YELLOW + player.getDisplayName() + " has gone into " + gameMode + " mode.");
 
     }
 

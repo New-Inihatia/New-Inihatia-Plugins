@@ -30,7 +30,10 @@ public class playerJoin implements Listener {
             playerStorageUtil.createPlayer(player, "Traveler", "Traveler");
         }
         else if (JSONplayer != null) {
-            if (JSONplayer.getRace().equalsIgnoreCase("Human")) {
+            if (JSONplayer.getRace().equalsIgnoreCase("Traveler")) {
+
+            }
+            else if (JSONplayer.getRace().equalsIgnoreCase("Human")) {
 
             }
             else if (JSONplayer.getRace().equalsIgnoreCase("Hobbit")) {
