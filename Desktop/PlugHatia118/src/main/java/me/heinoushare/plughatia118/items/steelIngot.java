@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.BlastingRecipe;
 import org.bukkit.inventory.CampfireRecipe;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -30,8 +31,8 @@ public class steelIngot {
         item.setItemMeta(meta);
         itemManager.steelIngot = item;
 
-        // Campfire Recipe
-        Bukkit.addRecipe(new CampfireRecipe(NamespacedKey.minecraft("steel_ingot"), item, Material.IRON_INGOT, 1.0f, 20 * 20));
+        // Blast Furnace Recipe
+        Bukkit.addRecipe(new BlastingRecipe(NamespacedKey.minecraft("steel_ingot"), item, Material.IRON_INGOT, 1.0f, 15 * 20));
 
     }
 

@@ -13,7 +13,6 @@ public class craftSteelHelmet implements Listener {
     @EventHandler
     public static void onCraftSteelHelmet(PrepareItemCraftEvent e) {
         if (e.getInventory().getMatrix().length < 9) {
-            System.out.println("Not crafting table");
             return;
         }
 
