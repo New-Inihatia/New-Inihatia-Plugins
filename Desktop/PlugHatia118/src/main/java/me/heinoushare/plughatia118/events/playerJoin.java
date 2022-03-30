@@ -58,14 +58,14 @@ public class playerJoin implements Listener {
 
     }
 
-    public static boolean day() {
-        long time = PlugHatia118.server.getWorld("world").getTime();
-
-        if(time > 0 && time < 12300) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+//    public static boolean day() {
+//        long time = PlugHatia118.server.getWorld("world").getTime();
+//
+//        if(time > 0 && time < 12300) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 
 }

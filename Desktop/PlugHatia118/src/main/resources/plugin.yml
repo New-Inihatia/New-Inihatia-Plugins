@@ -17,3 +17,6 @@ commands:
   givesteelingot:
     description: Steel Ingot
     usage: giveSteelIngot
+  givesteelhelmet:
+    description: Steel Helmet
+    usage: giveSteelHelmet
