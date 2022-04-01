@@ -76,6 +76,7 @@ public class setRace implements CommandExecutor {
                         player.sendMessage("That is not a valid race!");
                         player.sendMessage("Valid races: Hobbit, Elf, Human, Dwarf, Ork");
                     }
+                    player.setDisplayName("[" + JSONplayer.getRace() + "] [" + JSONplayer.getCLASS() + "] " + player.getName());
                 }
                 else {
                     player.sendMessage(ChatColor.YELLOW + "Your race is already set. You will need to ask an Admin to manually change your race.");

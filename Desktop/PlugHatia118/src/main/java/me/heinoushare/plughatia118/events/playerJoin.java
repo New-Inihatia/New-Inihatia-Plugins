@@ -28,6 +28,8 @@ public class playerJoin implements Listener {
 
         if (JSONplayer == null) {
             playerStorageUtil.createPlayer(player, "Traveler", "Traveler");
+            JSONplayer = playerStorageUtil.findPlayer(uuid);
+            player.setDisplayName("[" + JSONplayer.getRace() + "] [" + JSONplayer.getCLASS() + "] " + player.getName());
         }
         else if (JSONplayer != null) {
             if (JSONplayer.getRace().equalsIgnoreCase("Traveler")) {
