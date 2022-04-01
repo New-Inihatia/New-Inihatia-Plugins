@@ -1,7 +1,7 @@
 package me.heinoushare.plughatia118;
 
 import me.heinoushare.plughatia118.commands.*;
-import me.heinoushare.plughatia118.events.eventManager;
+import me.heinoushare.plughatia118.events.*;
 import me.heinoushare.plughatia118.items.itemManager;
 import me.heinoushare.plughatia118.utils.playerStorageUtil;
 import org.bukkit.ChatColor;

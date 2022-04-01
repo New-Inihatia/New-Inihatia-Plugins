@@ -34,31 +34,5 @@ public class playerSneak implements Listener {
                 }
             }
         }
-        else if (JSONplayer.getRace().equalsIgnoreCase("Wood_Elf")) {
-            if (!player.isSneaking()) {
-                player.sendMessage("You are hidden!");
-                player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 100000000, 0, false));
-            }
-            else if (player.isSneaking()) {
-                for (PotionEffect effect : player.getActivePotionEffects()) {
-                    if (effect.toString().startsWith("INVISIBILITY")) {
-                        player.removePotionEffect(effect.getType());
-                    }
-                }
-            }
-        }
-        else if (JSONplayer.getRace().equalsIgnoreCase("Dark_Elf")) {
-            if (!player.isSneaking()) {
-                player.sendMessage("You are hidden!");
-                player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 100000000, 0, false));
-            }
-            else if (player.isSneaking()) {
-                for (PotionEffect effect : player.getActivePotionEffects()) {
-                    if (effect.toString().startsWith("INVISIBILITY")) {
-                        player.removePotionEffect(effect.getType());
-                    }
-                }
-            }
-        }
     }
 }
