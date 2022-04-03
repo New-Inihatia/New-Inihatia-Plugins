@@ -28,8 +28,6 @@ public final class PlugHatia118 extends JavaPlugin {
         getCommand("setRace").setExecutor(new setRace());
         getCommand("speed").setExecutor(new speed());
         getCommand("leap").setExecutor(new leap());
-        getCommand("giveSteelIngot").setExecutor(new giveSteelIngot());
-        getCommand("giveSteelHelmet").setExecutor(new giveSteelHelmet());
 
         try {
             playerStorageUtil.loadPlayers();

@@ -14,9 +14,3 @@ commands:
   leap:
     description: bunnyboi
     usage: leap
-  givesteelingot:
-    description: Steel Ingot
-    usage: giveSteelIngot
-  givesteelhelmet:
-    description: Steel Helmet
-    usage: giveSteelHelmet
