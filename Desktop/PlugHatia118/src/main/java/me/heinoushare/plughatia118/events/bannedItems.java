@@ -9,7 +9,41 @@ import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.SmithItemEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class bannedItems implements Listener {
+
+    public static List<ItemStack> banned = new ArrayList<>();
+
+    public static void init() {
+        makeBanned();
+    }
+
+    public static void makeBanned() {
+        banned.add(new ItemStack(Material.DIAMOND_HELMET));
+        banned.add(new ItemStack(Material.DIAMOND_CHESTPLATE));
+        banned.add(new ItemStack(Material.DIAMOND_LEGGINGS));
+        banned.add(new ItemStack(Material.DIAMOND_BOOTS));
+
+        banned.add(new ItemStack(Material.DIAMOND_SWORD));
+        banned.add(new ItemStack(Material.DIAMOND_AXE));
+        banned.add(new ItemStack(Material.DIAMOND_PICKAXE));
+        banned.add(new ItemStack(Material.DIAMOND_SHOVEL));
+        banned.add(new ItemStack(Material.DIAMOND_HOE));
+
+
+        banned.add(new ItemStack(Material.NETHERITE_HELMET));
+        banned.add(new ItemStack(Material.NETHERITE_CHESTPLATE));
+        banned.add(new ItemStack(Material.NETHERITE_LEGGINGS));
+        banned.add(new ItemStack(Material.NETHERITE_BOOTS));
+
+        banned.add(new ItemStack(Material.NETHERITE_SWORD));
+        banned.add(new ItemStack(Material.NETHERITE_AXE));
+        banned.add(new ItemStack(Material.NETHERITE_PICKAXE));
+        banned.add(new ItemStack(Material.NETHERITE_SHOVEL));
+        banned.add(new ItemStack(Material.NETHERITE_HOE));
+    }
 
     @EventHandler
     public static void onCraftDiamondItem(CraftItemEvent e) {

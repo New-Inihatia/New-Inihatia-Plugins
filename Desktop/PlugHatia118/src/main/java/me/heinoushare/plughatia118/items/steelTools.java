@@ -10,94 +10,94 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class steelArmor {
+public class steelTools {
 
-    public static void steelArmorInit()
-    {
-        createSteelHelmet();
-        createSteelChestplate();
-        createSteelLeggings();
-        createSteelBoots();
-        createSteelShield();
+    public static void steelToolsInit() {
+        createSteelSword();
+        createSteelAxe();
+        createSteelPickaxe();
+        createSteelShovel();
+        createSteelHoe();
     }
 
-    public static void createSteelHelmet() {
-        ItemStack item = new ItemStack(Material.IRON_HELMET, 1);
+    public static void createSteelSword() {
+        ItemStack item = new ItemStack(Material.IRON_SWORD, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.GRAY + "Steel Helmet");
+        meta.setDisplayName(ChatColor.GRAY + "Steel Sword");
         List<String> lore = new ArrayList<>();
         meta.setLore(lore);
         meta.addEnchant(Enchantment.LUCK, 1, false);
-        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, false);
+        meta.addEnchant(Enchantment.DAMAGE_ALL, 1, false);
         meta.addEnchant(Enchantment.DURABILITY, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
-        itemManager.steelHelmet = item;
+        itemManager.steelSword = item;
 
-        // Crafting recipe in events.craftSteelArmor
+        // Crafting recipe in events.craftSteelTools
     }
 
-    public static void createSteelChestplate() {
-        ItemStack item = new ItemStack(Material.IRON_CHESTPLATE, 1);
+    public static void createSteelAxe() {
+        ItemStack item = new ItemStack(Material.IRON_AXE, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.GRAY + "Steel Chestplate");
+        meta.setDisplayName(ChatColor.GRAY + "Steel Axe");
         List<String> lore = new ArrayList<>();
         meta.setLore(lore);
         meta.addEnchant(Enchantment.LUCK, 1, false);
-        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, false);
+        meta.addEnchant(Enchantment.DIG_SPEED, 1, false);
         meta.addEnchant(Enchantment.DURABILITY, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
-        itemManager.steelChestplate = item;
+        itemManager.steelAxe = item;
 
-        // Crafting recipe in events.craftSteelArmor
+        // Crafting recipe in events.craftSteelTools
     }
 
-    public static void createSteelLeggings() {
-        ItemStack item = new ItemStack(Material.IRON_LEGGINGS, 1);
+    public static void createSteelPickaxe() {
+        ItemStack item = new ItemStack(Material.IRON_PICKAXE, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.GRAY + "Steel Leggings");
+        meta.setDisplayName(ChatColor.GRAY + "Steel Pickaxe");
         List<String> lore = new ArrayList<>();
         meta.setLore(lore);
         meta.addEnchant(Enchantment.LUCK, 1, false);
-        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, false);
+        meta.addEnchant(Enchantment.DIG_SPEED, 1, false);
         meta.addEnchant(Enchantment.DURABILITY, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
-        itemManager.steelLeggings = item;
+        itemManager.steelPickaxe = item;
 
-        // Crafting recipe in events.craftSteelArmor
+        // Crafting recipe in events.craftSteelTools
     }
 
-    public static void createSteelBoots() {
-        ItemStack item = new ItemStack(Material.IRON_BOOTS, 1);
+    public static void createSteelShovel() {
+        ItemStack item = new ItemStack(Material.IRON_SHOVEL, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.GRAY + "Steel Boots");
+        meta.setDisplayName(ChatColor.GRAY + "Steel Shovel");
         List<String> lore = new ArrayList<>();
         meta.setLore(lore);
         meta.addEnchant(Enchantment.LUCK, 1, false);
-        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 1, false);
+        meta.addEnchant(Enchantment.DIG_SPEED, 1, false);
         meta.addEnchant(Enchantment.DURABILITY, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
-        itemManager.steelBoots = item;
+        itemManager.steelShovel = item;
 
-        // Crafting recipe in events.craftSteelArmor
+        // Crafting recipe in events.craftSteelTools
     }
 
-    public static void createSteelShield() {
-        ItemStack item = new ItemStack(Material.SHIELD, 1);
+    public static void createSteelHoe() {
+        ItemStack item = new ItemStack(Material.IRON_HOE, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.GRAY + "Steel Shield");
+        meta.setDisplayName(ChatColor.GRAY + "Steel Hoe");
         List<String> lore = new ArrayList<>();
         meta.setLore(lore);
         meta.addEnchant(Enchantment.LUCK, 1, false);
+        meta.addEnchant(Enchantment.DIG_SPEED, 1, false);
         meta.addEnchant(Enchantment.DURABILITY, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
-        itemManager.steelShield = item;
+        itemManager.steelHoe = item;
 
-        // Crafting recipe in events.craftSteelArmor
+        // Crafting recipe in events.craftSteelTools
     }
 
 }
