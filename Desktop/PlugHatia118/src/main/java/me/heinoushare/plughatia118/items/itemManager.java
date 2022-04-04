@@ -5,7 +5,9 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 
+import static me.heinoushare.plughatia118.items.elvenSteelArmor.elvenSteelArmorInit;
 import static me.heinoushare.plughatia118.items.elvenSteelIngot.createElvenSteelIngot;
+import static me.heinoushare.plughatia118.items.elvenSteelTools.elvenSteelToolsInit;
 import static me.heinoushare.plughatia118.items.steelArmor.steelArmorInit;;
 import static me.heinoushare.plughatia118.items.steelIngot.createSteelIngot;
 import static me.heinoushare.plughatia118.items.steelTools.steelToolsInit;
@@ -35,8 +37,18 @@ public class itemManager {
     /* Elven Steel Items */
 
     // Elven Steel Armor
+    public static ItemStack elvenSteelHelmet;
+    public static ItemStack elvenSteelChestplate;
+    public static ItemStack elvenSteelLeggings;
+    public static ItemStack elvenSteelBoots;
+    public static ItemStack elvenSteelShield;
 
     // Elven Steel Tools
+    public static ItemStack elvenSteelSword;
+    public static ItemStack elvenSteelAxe;
+    public static ItemStack elvenSteelPickaxe;
+    public static ItemStack elvenSteelShovel;
+    public static ItemStack elvenSteelHoe;
 
     public static void init() {
         createSteelIngot();
@@ -44,6 +56,8 @@ public class itemManager {
         steelToolsInit();
 
         createElvenSteelIngot();
+        elvenSteelArmorInit();
+        elvenSteelToolsInit();
     }
 
     public static boolean checkCraft(ItemStack result, CraftingInventory inv, HashMap<Integer, ItemStack> ingredients) {

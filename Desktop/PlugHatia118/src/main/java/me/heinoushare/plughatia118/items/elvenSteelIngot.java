@@ -19,7 +19,7 @@ public class elvenSteelIngot {
     public static void createElvenSteelIngot() {
         ItemStack item = new ItemStack(Material.IRON_INGOT, 1);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.GRAY + "Elven Steel Ingot");
+        meta.setDisplayName(ChatColor.GREEN + "Elven Steel Ingot");
         List<String> lore = new ArrayList<>();
         lore.add("Created in the");
         lore.add("depths of ");
@@ -29,17 +29,6 @@ public class elvenSteelIngot {
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
         itemManager.elvenSteelIngot = item;
-
-        // Shaped Recipe
-        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("elven_steel_ingot"), item);
-        sr.shape("EIE",
-                "IEI",
-                "EIE");
-        sr.setIngredient('E', Material.EMERALD);
-        sr.setIngredient('I', Material.IRON_INGOT);
-
-        Bukkit.getServer().addRecipe(sr);
-
     }
 
 }

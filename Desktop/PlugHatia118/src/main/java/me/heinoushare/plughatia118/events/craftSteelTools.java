@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class craftSteelTools implements Listener {
 
     @EventHandler
-    public static void onPrepareCraftSteelArmor(PrepareItemCraftEvent e) {
+    public static void onPrepareCraftSteelTools(PrepareItemCraftEvent e) {
         if (e.getInventory().getMatrix().length < 9) {
             return;
         }
