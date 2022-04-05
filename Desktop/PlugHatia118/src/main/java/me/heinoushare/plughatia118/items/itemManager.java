@@ -1,5 +1,6 @@
 package me.heinoushare.plughatia118.items;
 
+import org.bukkit.entity.Item;
 import org.bukkit.inventory.CraftingInventory;
 import org.bukkit.inventory.ItemStack;
 
@@ -49,6 +50,13 @@ public class itemManager {
     public static ItemStack elvenSteelPickaxe;
     public static ItemStack elvenSteelShovel;
     public static ItemStack elvenSteelHoe;
+
+    /* Mithril Items */
+
+    // Mithril Armor
+
+    // Mithril Tools
+    public static ItemStack mithrilPickaxe;
 
     public static void init() {
         createSteelIngot();
