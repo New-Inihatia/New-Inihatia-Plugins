@@ -21,6 +21,8 @@ public class eventManager {
         getServer().getPluginManager().registerEvents(new craftElvenSteelIngot(), PlugHatia118.getPlugin());
         getServer().getPluginManager().registerEvents(new craftElvenSteelArmor(), PlugHatia118.getPlugin());
         getServer().getPluginManager().registerEvents(new craftElvenSteelTools(), PlugHatia118.getPlugin());
+
+        getServer().getPluginManager().registerEvents(new mineObsidian(), PlugHatia118.getPlugin());
     }
 
 }
