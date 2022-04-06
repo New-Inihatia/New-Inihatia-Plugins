@@ -9,6 +9,9 @@ import java.util.HashMap;
 import static me.heinoushare.plughatia118.items.elvenSteelArmor.elvenSteelArmorInit;
 import static me.heinoushare.plughatia118.items.elvenSteelIngot.createElvenSteelIngot;
 import static me.heinoushare.plughatia118.items.elvenSteelTools.elvenSteelToolsInit;
+import static me.heinoushare.plughatia118.items.mithrilArmor.mithrilArmorInit;
+import static me.heinoushare.plughatia118.items.mithrilIngot.createMithrilIngot;
+import static me.heinoushare.plughatia118.items.mithrilTools.mithrilToolsInit;
 import static me.heinoushare.plughatia118.items.steelArmor.steelArmorInit;;
 import static me.heinoushare.plughatia118.items.steelIngot.createSteelIngot;
 import static me.heinoushare.plughatia118.items.steelTools.steelToolsInit;
@@ -18,6 +21,7 @@ public class itemManager {
     /* Base materials */
     public static ItemStack steelIngot;
     public static ItemStack elvenSteelIngot;
+    public static ItemStack mithrilIngot;
 
     /* Steel Items */
 
@@ -54,9 +58,18 @@ public class itemManager {
     /* Mithril Items */
 
     // Mithril Armor
+    public static ItemStack mithrilHelmet;
+    public static ItemStack mithrilChestplate;
+    public static ItemStack mithrilLeggings;
+    public static ItemStack mithrilBoots;
+    public static ItemStack mithrilShield;
 
     // Mithril Tools
+    public static ItemStack mithrilSword;
+    public static ItemStack mithrilAxe;
     public static ItemStack mithrilPickaxe;
+    public static ItemStack mithrilShovel;
+    public static ItemStack mithrilHoe;
 
     public static void init() {
         createSteelIngot();
@@ -66,6 +79,10 @@ public class itemManager {
         createElvenSteelIngot();
         elvenSteelArmorInit();
         elvenSteelToolsInit();
+
+        createMithrilIngot();
+        mithrilArmorInit();
+        mithrilToolsInit();
     }
 
     public static boolean checkCraft(ItemStack result, CraftingInventory inv, HashMap<Integer, ItemStack> ingredients) {

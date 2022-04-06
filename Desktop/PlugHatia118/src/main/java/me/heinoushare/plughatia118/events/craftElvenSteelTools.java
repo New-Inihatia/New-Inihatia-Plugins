@@ -18,14 +18,14 @@ import java.util.UUID;
 public class craftElvenSteelTools implements Listener {
 
     @EventHandler
-    public static void onPrepareCraftElvenSteelTools(PrepareItemCraftEvent e) {
+    public static void onPrepareCraftMithrilTools(PrepareItemCraftEvent e) {
 
-        // Make sure crafter is an Elf
+        // Make sure crafter is an Dwarf
         List<HumanEntity> viewers = e.getViewers();
         for (HumanEntity temp : viewers) {
             Player p = Bukkit.getPlayer(temp.getName());
             UUID uuid = p.getUniqueId();
-            if (!playerStorageUtil.findPlayer(uuid).getRace().equalsIgnoreCase("Elf")) {
+            if (!playerStorageUtil.findPlayer(uuid).getRace().equalsIgnoreCase("Dwarf")) {
                 return;
             }
         }
@@ -37,25 +37,25 @@ public class craftElvenSteelTools implements Listener {
 
         ItemStack stick = new ItemStack(Material.STICK);
 
-        // Elven Steel Sword
-        itemManager.checkCraft(itemManager.elvenSteelSword, e.getInventory(), new HashMap<Integer, ItemStack>(){{
+        // Mithril Sword
+        itemManager.checkCraft(itemManager.mithrilSword, e.getInventory(), new HashMap<Integer, ItemStack>(){{
             put(0, null);
-            put(1, itemManager.elvenSteelIngot);
+            put(1, itemManager.mithrilIngot);
             put(2, null);
             put(3, null);
-            put(4, itemManager.elvenSteelIngot);
+            put(4, itemManager.mithrilIngot);
             put(5, null);
             put(6, null);
             put(7, stick);
             put(8, null);
         }});
 
-        // Elven Steel Axe (Blade on left)
-        boolean axeCrafted = itemManager.checkCraft(itemManager.elvenSteelAxe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
-            put(0, itemManager.elvenSteelIngot);
-            put(1, itemManager.elvenSteelIngot);
+        // Mithril Axe (Blade on left)
+        boolean axeCrafted = itemManager.checkCraft(itemManager.mithrilAxe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
+            put(0, itemManager.mithrilIngot);
+            put(1, itemManager.mithrilIngot);
             put(2, null);
-            put(3, itemManager.elvenSteelIngot);
+            put(3, itemManager.mithrilIngot);
             put(4, stick);
             put(5, null);
             put(6, null);
@@ -63,26 +63,26 @@ public class craftElvenSteelTools implements Listener {
             put(8, null);
         }});
 
-        // Elven Steel Axe (Blade on right)
+        // Mithril Axe (Blade on right)
         if (axeCrafted == false) {
-            itemManager.checkCraft(itemManager.elvenSteelAxe, e.getInventory(), new HashMap<Integer, ItemStack>() {{
+            itemManager.checkCraft(itemManager.mithrilAxe, e.getInventory(), new HashMap<Integer, ItemStack>() {{
                 put(0, null);
-                put(1, itemManager.elvenSteelIngot);
-                put(2, itemManager.elvenSteelIngot);
+                put(1, itemManager.mithrilIngot);
+                put(2, itemManager.mithrilIngot);
                 put(3, null);
                 put(4, stick);
-                put(5, itemManager.elvenSteelIngot);
+                put(5, itemManager.mithrilIngot);
                 put(6, null);
                 put(7, stick);
                 put(8, null);
             }});
         }
 
-        // Elven Steel Pickaxe
-        itemManager.checkCraft(itemManager.elvenSteelPickaxe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
-            put(0, itemManager.elvenSteelIngot);
-            put(1, itemManager.elvenSteelIngot);
-            put(2, itemManager.elvenSteelIngot);
+        // Mithril Pickaxe
+        itemManager.checkCraft(itemManager.mithrilPickaxe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
+            put(0, itemManager.mithrilIngot);
+            put(1, itemManager.mithrilIngot);
+            put(2, itemManager.mithrilIngot);
             put(3, null);
             put(4, stick);
             put(5, null);
@@ -91,10 +91,10 @@ public class craftElvenSteelTools implements Listener {
             put(8, null);
         }});
 
-        // Elven Steel Shovel
-        itemManager.checkCraft(itemManager.elvenSteelShovel, e.getInventory(), new HashMap<Integer, ItemStack>(){{
+        // Mithril Shovel
+        itemManager.checkCraft(itemManager.mithrilShovel, e.getInventory(), new HashMap<Integer, ItemStack>(){{
             put(0, null);
-            put(1, itemManager.elvenSteelIngot);
+            put(1, itemManager.mithrilIngot);
             put(2, null);
             put(3, null);
             put(4, stick);
@@ -104,10 +104,10 @@ public class craftElvenSteelTools implements Listener {
             put(8, null);
         }});
 
-        // Elven Steel Hoe (Blade on left)
-        boolean hoeCrafted = itemManager.checkCraft(itemManager.elvenSteelHoe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
-            put(0, itemManager.elvenSteelIngot);
-            put(1, itemManager.elvenSteelIngot);
+        // Mithril Hoe (Blade on left)
+        boolean hoeCrafted = itemManager.checkCraft(itemManager.mithrilHoe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
+            put(0, itemManager.mithrilIngot);
+            put(1, itemManager.mithrilIngot);
             put(2, null);
             put(3, null);
             put(4, stick);
@@ -118,11 +118,11 @@ public class craftElvenSteelTools implements Listener {
         }});
 
         if (hoeCrafted == false) {
-            // Elven Steel Hoe (Blade on right)
-            itemManager.checkCraft(itemManager.elvenSteelHoe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
+            // Mithril Hoe (Blade on right)
+            itemManager.checkCraft(itemManager.mithrilHoe, e.getInventory(), new HashMap<Integer, ItemStack>(){{
                 put(0, null);
-                put(1, itemManager.elvenSteelIngot);
-                put(2, itemManager.elvenSteelIngot);
+                put(1, itemManager.mithrilIngot);
+                put(2, itemManager.mithrilIngot);
                 put(3, null);
                 put(4, stick);
                 put(5, null);
