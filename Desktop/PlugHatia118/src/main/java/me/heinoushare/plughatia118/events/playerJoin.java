@@ -48,7 +48,6 @@ public class playerJoin implements Listener {
                 player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false));
-                player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1000000000, 0, false));
             }
             else if (JSONplayer.getRace().equalsIgnoreCase("Ork")) {
@@ -71,15 +70,5 @@ public class playerJoin implements Listener {
         }
 
     }
-
-//    public static boolean day() {
-//        long time = PlugHatia118.server.getWorld("world").getTime();
-//
-//        if(time > 0 && time < 12300) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
 
 }

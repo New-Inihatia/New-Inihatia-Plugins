@@ -14,11 +14,12 @@ import java.util.List;
 
 import static me.heinoushare.plughatia118.items.itemManager.*;
 
-public class mineObsidian implements Listener {
+public class mineHardBlock implements Listener {
 
     @EventHandler
-    public static void onMineObsidian(BlockBreakEvent e) {
-        if (!e.getBlock().getBlockData().getMaterial().equals(Material.OBSIDIAN)) {
+    public static void onMineHardBlock(BlockBreakEvent e) {
+        Material block = e.getBlock().getBlockData().getMaterial();
+        if (!block.equals(Material.OBSIDIAN) && !block.equals(Material.CRYING_OBSIDIAN) && !block.equals(Material.ANCIENT_DEBRIS) && !block.equals(Material.NETHERITE_BLOCK)) {
             return;
         }
 
