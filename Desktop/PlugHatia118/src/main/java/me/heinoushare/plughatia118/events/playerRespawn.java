@@ -1,7 +1,9 @@
 package me.heinoushare.plughatia118.events;
 
+import me.heinoushare.plughatia118.PlugHatia118;
 import me.heinoushare.plughatia118.objects.playerObj;
 import me.heinoushare.plughatia118.utils.playerStorageUtil;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,32 +22,35 @@ public class playerRespawn implements Listener {
 
         Player player = e.getPlayer();
         UUID uuid = player.getUniqueId();
-
         playerObj JSONplayer = playerStorageUtil.findPlayer(uuid);
 
-        if (JSONplayer.getRace().equalsIgnoreCase("Traveler")) {
+        Bukkit.getScheduler().runTaskLater(PlugHatia118.getPlugin(), task -> {
 
-        }
-        else if (JSONplayer.getRace().equalsIgnoreCase("Human")) {
+            if (JSONplayer.getRace().equalsIgnoreCase("Traveler")) {
 
-        }
-        else if (JSONplayer.getRace().equalsIgnoreCase("Hobbit")) {
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false));
-        }
-        else if (JSONplayer.getRace().equalsIgnoreCase("Elf")) {
-            player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
-        }
-        else if (JSONplayer.getRace().equalsIgnoreCase("Dwarf")) {
-            player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1000000000, 0, false));
-        }
-        else if (JSONplayer.getRace().equalsIgnoreCase("Ork")) {
-            player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false));
-        }
+            }
+            else if (JSONplayer.getRace().equalsIgnoreCase("Human")) {
+
+            }
+            else if (JSONplayer.getRace().equalsIgnoreCase("Hobbit")) {
+                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false));
+            }
+            else if (JSONplayer.getRace().equalsIgnoreCase("Elf")) {
+                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
+            }
+            else if (JSONplayer.getRace().equalsIgnoreCase("Dwarf")) {
+                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1000000000, 0, false));
+            }
+            else if (JSONplayer.getRace().equalsIgnoreCase("Ork")) {
+                player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false));
+            }
+
+        }, 5L);
 
         ItemStack[] playerInv = player.getInventory().getContents();
         for (ItemStack invTemp : playerInv) {
