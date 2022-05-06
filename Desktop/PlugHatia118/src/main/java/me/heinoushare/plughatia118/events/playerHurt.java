@@ -45,15 +45,15 @@ public class playerHurt implements Listener {
         Long oldTime = cooldown.get(uuid);
 
         if (oldTime == null) {
-            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20 * 10, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 10, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 12, 0, false));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20 * 10, 2, false));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 10, 1, false));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 12, 2, false));
             cooldown.put(uuid, System.currentTimeMillis());
             return;
         } else if (System.currentTimeMillis() - oldTime > 40 * 1000) {
-            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20 * 10, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 10, 0, false));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 12, 0, false));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20 * 10, 2, false));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 20 * 10, 1, false));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 20 * 12, 2, false));
             cooldown.put(uuid, System.currentTimeMillis());
             return;
         }
