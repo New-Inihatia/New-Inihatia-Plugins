@@ -41,31 +41,31 @@ public class setRace implements CommandExecutor {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false));
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false, false));
                     }
                     else if (args[0].equalsIgnoreCase("Elf")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false, false));
                     }
                     else if (args[0].equalsIgnoreCase("Dwarf")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false));
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false));
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false));
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1000000000, 0, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1000000000, 0, false, false));
                     }
                     else if (args[0].equalsIgnoreCase("Ork")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false));
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false, false));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false, false));
                     }
                     else if (args[0].equalsIgnoreCase("Human")) {
                         newJSONplayer.setRace(args[0]);

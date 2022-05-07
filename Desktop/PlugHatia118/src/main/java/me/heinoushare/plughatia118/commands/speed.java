@@ -38,7 +38,7 @@ public class speed implements CommandExecutor {
                 }
             }
             if (hadSpeed == false) {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1000000000, 0, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 1000000000, 0, false, false));
             }
             return true;
         }

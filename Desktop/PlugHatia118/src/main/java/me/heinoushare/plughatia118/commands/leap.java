@@ -38,7 +38,7 @@ public class leap implements CommandExecutor {
                 }
             }
             if (hadJump == false) {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1000000000, 0, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 1000000000, 0, false, false));
             }
             return true;
         }
