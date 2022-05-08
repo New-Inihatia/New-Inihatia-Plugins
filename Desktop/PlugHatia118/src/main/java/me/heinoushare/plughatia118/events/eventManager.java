@@ -37,6 +37,8 @@ public class eventManager {
 
         getServer().getPluginManager().registerEvents(new playerHurt(), PlugHatia118.getPlugin());
 
+        getServer().getPluginManager().registerEvents(new playerEquipBoots(), PlugHatia118.getPlugin());
+
     }
 
 }
