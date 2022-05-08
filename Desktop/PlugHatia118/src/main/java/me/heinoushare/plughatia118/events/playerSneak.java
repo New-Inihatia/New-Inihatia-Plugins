@@ -29,6 +29,7 @@ public class playerSneak implements Listener {
             else if (player.isSneaking()) {
                 for (PotionEffect effect : player.getActivePotionEffects()) {
                     if (effect.toString().startsWith("INVISIBILITY")) {
+                        player.sendMessage("You are no longer hidden!");
                         player.removePotionEffect(effect.getType());
                     }
                 }

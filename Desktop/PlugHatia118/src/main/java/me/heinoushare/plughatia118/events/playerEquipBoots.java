@@ -23,15 +23,13 @@ public class playerEquipBoots implements Listener {
             return;
         }
 
-        String itemName = e.getCurrentItem().getType().name();
+        String itemName = e.getCursor().getType().name();
 
-        if (e.getSlotType() == InventoryType.SlotType.ARMOR) {
-            if (p.getInventory().getHelmet().equals(null)) {
-                if (itemName.endsWith("_BOOTS")) {
-                    p.closeInventory();
-                    p.sendMessage("No boots for Hobbits!");
-                    e.setCancelled(true);
-                }
+        if (e.getSlotType().equals(InventoryType.SlotType.ARMOR)) {
+            if (itemName.endsWith("_BOOTS")) {
+                p.closeInventory();
+                p.sendMessage("No boots for Hobbits!");
+                e.setCancelled(true);
             }
         }
     }
