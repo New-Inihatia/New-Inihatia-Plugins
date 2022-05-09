@@ -45,7 +45,7 @@ public class playerRespawn implements Listener {
                 player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false, false));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1000000000, 0, false, false));
             }
-            else if (JSONplayer.getRace().equalsIgnoreCase("Ork")) {
+            else if (JSONplayer.getRace().equalsIgnoreCase("Orc")) {
                 player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false, false));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false, false));
             }

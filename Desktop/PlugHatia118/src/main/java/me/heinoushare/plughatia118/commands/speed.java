@@ -24,7 +24,7 @@ public class speed implements CommandExecutor {
         if (!(sender instanceof Player)) {
             sender.sendMessage("Only player can use that command!");
             return false;
-        } else if (!(JSONplayer.getRace().equalsIgnoreCase("Elf")) && !(JSONplayer.getRace().equalsIgnoreCase("Ork"))) {
+        } else if (!(JSONplayer.getRace().equalsIgnoreCase("Elf")) && !(JSONplayer.getRace().equalsIgnoreCase("Orc"))) {
             player.sendMessage(ChatColor.RED + "You are not the correct race to use this command!");
             return false;
         } else if (cmd.getName().equalsIgnoreCase("speed")) {

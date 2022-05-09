@@ -36,21 +36,25 @@ public class setRace implements CommandExecutor {
                 playerObj newJSONplayer = JSONplayer;
                 newJSONplayer.setUsername(player.getName());
                 newJSONplayer.setUuid(uuid);
-                if (JSONplayer.getRace().equalsIgnoreCase("Traveler")) {
-                    if (args[0].equalsIgnoreCase("Hobbit")) {
+
+                // Capitalizes the first letter and puts the rest in lowercase
+                String raceStr = args[0].substring(0, 0).toUpperCase() + args[0].substring(1, args[0].length() - 1).toLowerCase();
+
+                if (JSONplayer.getRace().equals("Traveler")) {
+                    if (raceStr.equals("Hobbit")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
                         player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 1000000000, 0, false, false));
                         player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false, false));
                     }
-                    else if (args[0].equalsIgnoreCase("Elf")) {
+                    else if (raceStr.equals("Elf")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
                         player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false, false));
                     }
-                    else if (args[0].equalsIgnoreCase("Dwarf")) {
+                    else if (raceStr.equals("Dwarf")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
@@ -60,21 +64,21 @@ public class setRace implements CommandExecutor {
                         player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1000000000, 0, false, false));
                         player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1000000000, 0, false, false));
                     }
-                    else if (args[0].equalsIgnoreCase("Ork")) {
+                    else if (raceStr.equals("Orc")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
                         player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 1000000000, 0, false, false));
                         player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 1000000000, 0, false, false));
                     }
-                    else if (args[0].equalsIgnoreCase("Human")) {
+                    else if (raceStr.equals("Human")) {
                         newJSONplayer.setRace(args[0]);
                         playerStorageUtil.updatePlayer(uuid, newJSONplayer);
                         player.sendMessage(ChatColor.GOLD + "You are now a " + args[0] + "!");
                     }
                     else {
                         player.sendMessage("That is not a valid race!");
-                        player.sendMessage("Valid races: Hobbit, Elf, Human, Dwarf, Ork");
+                        player.sendMessage("Valid races: Hobbit, Elf, Human, Dwarf, Orc");
                     }
                     player.setDisplayName("[" + JSONplayer.getRace() + "] [" + JSONplayer.getCLASS() + "] " + player.getName());
                 }

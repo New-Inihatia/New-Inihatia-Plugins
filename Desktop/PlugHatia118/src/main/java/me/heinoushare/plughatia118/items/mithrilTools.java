@@ -59,6 +59,7 @@ public class mithrilTools {
         List<String> lore = new ArrayList<>();
         meta.setLore(lore);
         meta.addEnchant(Enchantment.LUCK, 1, false);
+        meta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 1, false);
         meta.addEnchant(Enchantment.DIG_SPEED, 5, false);
         meta.addEnchant(Enchantment.DURABILITY, 3, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);

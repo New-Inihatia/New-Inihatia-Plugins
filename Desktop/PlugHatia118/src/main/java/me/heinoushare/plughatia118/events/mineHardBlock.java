@@ -1,6 +1,5 @@
 package me.heinoushare.plughatia118.events;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,6 +18,7 @@ public class mineHardBlock implements Listener {
     @EventHandler
     public static void onMineHardBlock(BlockBreakEvent e) {
         Material block = e.getBlock().getBlockData().getMaterial();
+
         if (!block.equals(Material.OBSIDIAN) && !block.equals(Material.CRYING_OBSIDIAN) && !block.equals(Material.ANCIENT_DEBRIS) && !block.equals(Material.NETHERITE_BLOCK)) {
             return;
         }
@@ -33,8 +33,7 @@ public class mineHardBlock implements Listener {
 
         for (ItemStack pick : picks) {
             if (inv.getItemInMainHand().equals(pick)) {
-                inv.addItem(new ItemStack(Material.OBSIDIAN));
-                p.sendMessage(ChatColor.GRAY + "You mined obsidian");
+                p.getWorld().dropItem(e.getBlock().getLocation(), new ItemStack(block));
                 break;
             }
         }
