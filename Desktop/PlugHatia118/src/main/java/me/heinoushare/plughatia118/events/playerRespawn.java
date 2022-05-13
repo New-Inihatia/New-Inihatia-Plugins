@@ -15,6 +15,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.UUID;
 
+import static org.bukkit.Bukkit.getServer;
+
 public class playerRespawn implements Listener {
 
     @EventHandler
@@ -56,10 +58,11 @@ public class playerRespawn implements Listener {
         for (ItemStack invTemp : playerInv) {
             for (ItemStack remTemp : bannedItems.banned) {
                 if (invTemp != null) {
-                    if (invTemp.equals(remTemp)) {
-                        player.getInventory().removeItem(remTemp);
+                    if (invTemp.getType().equals(remTemp.getType())) {
+                        player.getInventory().removeItem(invTemp);
                         player.sendMessage(ChatColor.DARK_RED + "You have been caught with a banned item (" + invTemp + ") and it has been removed from your inventory.\n" +
                                 "If you think this was a mistake, please contact a Staff member.");
+                        getServer().getConsoleSender().sendMessage(ChatColor.DARK_RED + player.getName() + " has been caught with a banned item (" + invTemp + ") and it has been removed from their inventory.");
                     }
                 }
             }
